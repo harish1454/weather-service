@@ -96,13 +96,17 @@ src/main/java/com/example/demo/
   MyWeatherController.java    - REST controller handling weather requests
   MyWeatherService.java       - Service layer calling OpenWeatherMap API
 src/main/resources/
-  application.properties      - Application configuration
+  application.properties      - Empty (uses Spring Boot defaults)
   static/index.html           - Static welcome page
 ```
 
 ## Configuration
 
-The application uses the OpenWeatherMap API to fetch weather data. The API key and base URL are configured in the service layer. Weather data is returned in metric units by default.
+The application uses the OpenWeatherMap API to fetch weather data. Weather data is returned in metric units by default.
+
+**Important:** The API key and base URL are currently hardcoded in `MyWeatherService.java`. For production use, these values should be externalized to `application.properties` or environment variables to avoid committing secrets to source control.
+
+To use this application, you will need to obtain your own API key from [OpenWeatherMap](https://openweathermap.org/appid) and replace the hardcoded value in `MyWeatherService.java`.
 
 ## Running Tests
 
