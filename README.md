@@ -2,6 +2,7 @@
 
 A Spring Boot application that provides real-time weather information for any city using the [OpenWeatherMap API](https://openweathermap.org/api).
 
+
 ## Features
 
 - REST API endpoint to fetch current weather data by city name
